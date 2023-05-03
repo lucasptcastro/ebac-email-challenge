@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>EBAC - Login</title>
+  </head>
+  <body>
+    <form>
+      <h3>Insira o seu login</h3>
+      <input type="text" placeholder="User" id="login" />
+      <input
+        type="password"
+        placeholder="Senha"
+        id="password"
+        required
+        autocomplete="current-password"
+      />
+      <input type="submit" value="Entrar" onclick="logar(); return false" />
+    </form>
+
+    <script>
+      function logar() {
+        const user = document.getElementById("login").value;
+        const password = document.getElementById("password").value;
+
+        console.log(`user: ${user}`);
+        console.log(`senha: ${password}`);
+
+        if (user == "admin" && password == "admin") {
+          alert("Logado com sucesso!");
+        } else {
+          alert("Credenciais incorretas!");
+        }
+      }
+    </script>
+  </body>
+</html>
